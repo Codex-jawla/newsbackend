@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cxc=^y%+#mw$5pg3jr7bgah40)fq-%j!yi*(59$jlt$v6^#!ok
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["newsbackend-mdlq.onrender.com"]
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 CORS_ORIGIN_ALLOW_ALL = True
 
 

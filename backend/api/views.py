@@ -25,14 +25,14 @@ class CategoryView(viewsets.ModelViewSet):
             return Response(f'error no data found {e}')
 
 class NewsView(viewsets.ModelViewSet):
-    parser_classes = (MultiPartParser, FormParser)
+    # parser_classes = (MultiPartParser, FormParser)
     queryset = News.objects.all()
     serializer_class = NewsSerializer
-    ordering_fields = ['news_date']
+    # ordering_fields = ['news_date']
 
-    def post(self, request, *args, **kwargs):
-        serializer = NewsSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # def post(self, request, *args, **kwargs):
+    #     serializer = NewsSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
